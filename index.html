@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="./scripts/index.js" defer></script>
+    <link href="./styles/index.css" rel="stylesheet">
+    <title>LibraryApp</title>
   </head>
   <body>
-    hello
+    <div class="site">
+    <div class="header">
+      <span class="logo">LibraryApp</span>
+    </div>
+    <div class="libContent">
+      <div class="controls">
+        <div class="left-side"><button id="add-new">Add Book</button></div>
+        <div class="right-side">
+          <label id="sort-by">Sort By</label> 
+          <select id="sort-options">
+              <option value="Title">Title</option>
+              <option value="Author">Author</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <div class="book-cards" id="book-cards">
+        <div class="card" id="Title+author">
+          <button class="card-remove">X</button>
+          <span class="card-title">Book Title</span>
+          <span class="card-author">Book Author</span>
+          <span class="Pages">Pages</span>
+          <div>Read: <input class="check-box" type="checkbox"></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="footer">Connor @conno732</div>
   </body>
+  <div id="add-book-overlay">
+    <div id="form">
+      <button id="exit-button">X</button>
+      <div class="form-header">
+        <span class="title">Add a book</span>
+      </div>
+      <div id="content">
+        <input class="text-input" type="text" id="book-title" placeholder="Title">
+        <input class="text-input" type="text" id="author-name" placeholder="Author">
+        <input class="text-input" type="number" id="total-pages" placeholder="Pages">
+        <label class="text-input" for="read">Finished:</label>
+        <input type="checkbox" id="read">
+        <button id="submit">Submit</button>
+      </div>
+       </div>
+  </div>
 </html>
