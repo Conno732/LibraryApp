@@ -1,5 +1,15 @@
 let myLibrary = [];
 
+let testBook = new Book();
+
+testBook.id = "123Book321Author";
+testBook.author = "321Author";
+testBook.title = "123Book";
+testBook.totalPages = 48;
+
+myLibrary.push(testBook);
+displayLibrary();
+
 document.getElementById("add-new").addEventListener("click", () => {
   addBookOverlayOn();
 });
@@ -14,8 +24,19 @@ document.getElementById("exit-button").addEventListener("click", () => {
   clearForm();
 });
 
+document.getElementById("book-cards").addEventListener("click", (e) => {
+  if (e.target.classList.value !== "card-remove") return;
+  const target = e.target.parentElement.id;
+  console.log(target);
+  myLibrary = myLibrary.filter((e) => {
+    console.log(e.title + e.author !== target);
+    return e.title + e.author !== target;
+  });
+  console.log(myLibrary);
+  displayLibrary();
+});
+
 function Book() {
-  this.id;
   this.author;
   this.title;
   this.totalPages;
@@ -35,7 +56,6 @@ function displayLibrary() {
   }
   myLibrary.forEach((e) => {
     displayCard(e);
-    console.log(e);
   });
 }
 
@@ -43,6 +63,7 @@ function displayCard(e) {
   const bookCards = document.querySelector(".book-cards");
   const card = document.createElement("div");
   card.classList += "card";
+  card.id = e.title + e.author;
   let title = document.createElement("span");
   title.innerText = e.title;
   let author = document.createElement("span");

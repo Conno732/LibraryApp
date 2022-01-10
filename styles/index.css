@@ -55,6 +55,8 @@ body {
   height: 100%;
   flex: 1;
   padding: 32px 90px;
+  flex-wrap: wrap;
+  gap: 42px;
 }
 
 .card {
@@ -67,6 +69,7 @@ body {
   background-color: mediumturquoise;
   border-style: solid;
   border-radius: 44px;
+  flex-shrink: 0;
 }
 
 .card-title {
@@ -102,8 +105,8 @@ body {
 }
 
 #form {
-  width: 600px;
-  height: 720px;
+  width: 500px;
+  height: 550px;
   border-radius: 18px;
   background-color: white;
   display: flex;
