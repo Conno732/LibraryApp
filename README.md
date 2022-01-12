@@ -2,8 +2,8 @@
 
 Small library app. Purely for JS practice.
 
-TODO (potentially)
+TODO? Styling the form and the book cards
 
-Styling the form and the book cards
+TODO? Make the form an actual HTML form with correct validation
 
-Requiring a unique book for every entry
+TODO? Rewrite js to utilize classes
